@@ -1,5 +1,5 @@
 import { workspace, Uri, window } from 'vscode';
-import { createBayonFolder, createBayonReactComponent, verifyPermissionWriteFile } from '../components';
+import { createComponentFolder, createFilesReactComponent, verifyPermissionWriteFile } from '../components';
 
 
 describe('Extension Test Suite', () => {
@@ -8,11 +8,11 @@ describe('Extension Test Suite', () => {
     jest.clearAllMocks();
   });
 
-  test('createBayonFolder - criação de pasta', () => {
+  test('createComponentFolder - criação de pasta', () => {
     const path = '/caminho/qualquer';
     const nameComponent = 'MeuComponente';
   
-    createBayonFolder(path, nameComponent);
+    createComponentFolder(path, nameComponent);
   
     expect(workspace.fs.createDirectory).toHaveBeenCalled();
   });
@@ -22,7 +22,7 @@ describe('Extension Test Suite', () => {
     const path = 'pathTest';
     const nameComponent = 'MeuComponente';
 
-    createBayonReactComponent(path, nameComponent);
+    createFilesReactComponent(path, nameComponent);
 
     expect(workspace.fs.writeFile).toHaveBeenCalledWith(
       Uri.parse(`${path}/${nameComponent}/index.ts`),

@@ -7,12 +7,12 @@ export const verifyPermissionWriteFile = () => {
   }
 };
 
-export const createBayonFolder = (path: string, nameComponent: string) => {
+export const createComponentFolder = (path: string, nameComponent: string) => {
   const uriParse = vscode.Uri.parse(path + '/' + nameComponent + '/');
   vscode.workspace.fs.createDirectory(uriParse);
 };
 
-export const createBayonReactComponent = (path: string, nameComponent: string) => {
+export const createFilesReactComponent = (path: string, nameComponent: string) => {
   const baseUri = `${path}/${nameComponent}/${nameComponent}`;
   vscode.workspace.fs.writeFile(vscode.Uri.parse(path + '/' + nameComponent + '/index.ts'), new TextEncoder().encode(getTemplates(nameComponent, 'INDEX')));
   vscode.workspace.fs.writeFile(vscode.Uri.parse(baseUri + '.tsx'), new TextEncoder().encode(getTemplates(nameComponent, 'COMPONENT')));

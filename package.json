@@ -1,13 +1,13 @@
 {
-  "name": "vscode-bayon-component-generator",
+  "name": "vscode-react-component-generator",
   "publisher": "devjoaolopes",
-  "displayName": "Bayon Component Generator",
-  "description": "Extension for generate components using Bayon Design System in React",
-  "icon": "art/icon-react.png",
+  "displayName": "React Component Generator",
+  "description": "Extension for generate components TSX using React",
+  "icon": "art/icon.png",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DevJoaoLopes/Bayon-Component-Generator"
+    "url": "https://github.com/DevJoaoLopes/React-Component-Generator"
   },
   "engines": {
     "vscode": "^1.85.0"
@@ -18,22 +18,21 @@
   "keywords": [
     "React",
     "Boilerplate",
-    "Component Generator",
-    "Jest"
+    "Component Generator"
   ],
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "bayon-component-generator.generate",
-        "title": "Bayon Generate Component"
+        "command": "react-component-generator.generate",
+        "title": "React Generate Component"
       }
     ],
     "menus": {
       "explorer/context": [
         {
-          "command": "bayon-component-generator.generate",
+          "command": "react-component-generator.generate",
           "group": "navigation"
         }
       ]
