@@ -1,6 +1,6 @@
 <p align="center">
   <br />
-  <a title="bayon" href="https://github.com/DevJoaoLopes/Bayon-Component-Generator"><img src="art/icon.png" alt="Bayon Logo" width="20%" /></a>
+  <a title="react-generator" href="https://github.com/DevJoaoLopes/React-Component-Generator"><img src="art/icon.png" alt="Logo" width="20%" /></a>
 </p>
 
 
@@ -33,20 +33,6 @@ export const NameComponent = () => {
         </Styles.Container>
     );
 };
-
-```
-
-
-#### Component Styled
-
-```typescript
-
-import { styled } from '@bayon/commons';
-
-export const Container = styled('div')(() => ({
-  display: 'flex',
-  boxSizing: 'border-box',
-}));
 
 ```
 
@@ -87,4 +73,4 @@ const createComponent = (props = {}) => {
 
 # License
 
-[GPL-3.0](LICENSE.md) &copy; Joao Victor Faustino Piga Lopes
+[GPL-3.0](LICENSE.md) &copy; DevJoaoLopes
